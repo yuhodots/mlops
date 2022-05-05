@@ -1,8 +1,34 @@
-## Kubernetes Cheat Sheet
+# Machine Learning System Design Patterns
 
-Docker, Kubernetes, Dev/MLOps 관련 개인적인 공부와 간단한 실습을 진행하는 저장소입니다. 현재는 references의 자료들을 따라가고 있습니다.
+I implemented a simple machine learning system in this repository by referring to [link](https://mercari.github.io/ml-system-design-pattern/).
+
+- Iris flower classification & MNIST classification
+- You can check the demo page in [here](#)(TBU).
+
+## Patterns
+
+### Training pattern
+
+- Batch training pattern w/ cron
+
+### Operation pattern
+
+- Model-load pattern w/ GCP Kubernetes Engine & GCP Storage
+- Prediction log pattern w/ Fluentd
+
+### Serving pattern
+
+- Web single, Synchronous pattern
+  - Web framework: Gunicorn + FastAPI
+  - Serving: TensorFlow Serving, ONNX Runtime
+  - Database: MySQL, Redis
+
+### QA pattern
+
+- Shadow AB-testing pattern w/ Kubernetes + Istio
 
 ## References
 
-- [모두의 MLOps](https://mlops-for-all.github.io/)
-- [쿠버네티스 기초 학습](https://kubernetes.io/ko/docs/tutorials/kubernetes-basics/)
+- https://github.com/mercari/ml-system-design-pattern
+- https://mercari.github.io/ml-system-design-pattern/
+
