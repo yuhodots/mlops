@@ -2,13 +2,14 @@
 
 I implemented a simple machine learning system in this repository by referring to [link](https://mercari.github.io/ml-system-design-pattern/).
 
-- Iris flower classification & MNIST classification
+- Iris flower classification & CIFAR10 classification
 - You can check the demo page in [here](#)(TBU).
 
 ## Patterns
 
 ### Training pattern
 
+- Pipeline training pattern w/ MLflow
 - Batch training pattern w/ cron
 
 ### Operation pattern
@@ -31,4 +32,5 @@ I implemented a simple machine learning system in this repository by referring t
 
 - https://github.com/mercari/ml-system-design-pattern
 - https://mercari.github.io/ml-system-design-pattern/
+- https://github.com/shibuiwilliam/ml-system-in-actions
 
