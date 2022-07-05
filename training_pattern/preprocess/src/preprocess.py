@@ -1,6 +1,7 @@
 import argparse
 import json
 import os
+from tqdm import tqdm
 from distutils.dir_util import copy_tree
 
 import mlflow
@@ -82,7 +83,7 @@ def main():
         meta_test = {i: [] for i in range(10)}
 
         # Get data file configuration
-        for f in PreprocessConfigurations.train_files:
+        for f in tqdm(PreprocessConfigurations.train_files, desc="Pre-process training dataset"):
             rawdata = unpickle(file=os.path.join(cifar10_directory, f))
             class_to_filename = parse_pickle(
                 rawdata=rawdata,
@@ -91,7 +92,7 @@ def main():
             for cf in class_to_filename:
                 meta_train[int(cf[0])].append(cf[1])
 
-        for f in PreprocessConfigurations.test_files:
+        for f in tqdm(PreprocessConfigurations.test_files, desc="Pre-process test dataset"):
             rawdata = unpickle(file=os.path.join(cifar10_directory, f))
             class_to_filename = parse_pickle(
                 rawdata=rawdata,

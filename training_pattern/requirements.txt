@@ -11,3 +11,4 @@ requests>=2.25.0
 torch>=1.7.1
 torchvision>=0.8.1
 tensorboard>=2.4.0
+tqdm

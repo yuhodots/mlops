@@ -8,6 +8,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torchvision
+from tqdm import tqdm
 from PIL import Image
 from torch.utils.data import DataLoader, Dataset
 from torch.utils.tensorboard import SummaryWriter
@@ -265,7 +266,7 @@ def train(
     device: str = "cpu",
 ):
     logger.info("start training...")
-    for epoch in range(epochs):
+    for epoch in tqdm(range(epochs), desc="Train epoch"):
         running_loss = 0.0
         logger.info(f"starting epoch: {epoch}")
         epoch_start = time.time()
