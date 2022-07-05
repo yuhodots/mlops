@@ -12,6 +12,11 @@ I implemented a simple machine learning system in this repository by referring t
 - Pipeline training pattern w/ MLflow
 - Batch training pattern w/ cron
 
+```shell
+cd training_pattern
+make  # preprocess -> train -> building -> evaluate
+```
+
 ### Operation pattern
 
 - Model-load pattern w/ GCP Kubernetes Engine & GCP Storage
